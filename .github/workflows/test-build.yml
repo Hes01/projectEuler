@@ -1,18 +1,28 @@
-name: Verificar Pull Request a Main
+name: Build and Test with Maven
 
 on:
+  push:
+    branches:
+      - develop  # Esto se dispara cuando haces push a la rama develop
   pull_request:
-    branches: [main]
+    branches:
+      - develop  # También cuando abres un PR hacia develop
 
 jobs:
   build:
     runs-on: ubuntu-latest
+    
     steps:
-    - uses: actions/checkout@v4
+    - name: Checkout code
+      uses: actions/checkout@v2
+    
     - name: Set up JDK 21
-      uses: actions/setup-java@v4
+      uses: actions/setup-java@v2
       with:
         java-version: '21'
-        distribution: 'temurin'
+    
     - name: Build with Maven
-      run: mvn -B verify --file pom.xml # Ejecuta compilación y pruebas
+      run: mvn clean install  
+    
+    - name: Run tests
+      run: mvn test  
