@@ -5,6 +5,7 @@ import java.util.List;
 
 public class Main {
     public static void main(String[] args) {
+        //Problema 1
 
         //**
         // Si nosotros listamos todos los numeros naturales debajo de 10 que son multiplos de 3 o 5, obtenemos 3, 5, 6 y 9.
