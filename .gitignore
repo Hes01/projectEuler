@@ -1,9 +1,21 @@
+# === Maven ===
 target/
 !.mvn/wrapper/maven-wrapper.jar
 !**/src/main/**/target/
 !**/src/test/**/target/
+**/logs/
+*.log
+*.tmp
 
-### IntelliJ IDEA ###
+# === Java ===
+*.class
+*.jar
+*.war
+*.ear
+*.hprof
+
+# === IntelliJ IDEA ===
+.idea/
 .idea/modules.xml
 .idea/jarRepositories.xml
 .idea/compiler.xml
@@ -11,17 +23,18 @@ target/
 *.iws
 *.iml
 *.ipr
+out/
 
-### Eclipse ###
+# === Eclipse ===
 .apt_generated
 .classpath
 .factorypath
 .project
-.settings
+.settings/
 .springBeans
 .sts4-cache
 
-### NetBeans ###
+# === NetBeans ===
 /nbproject/private/
 /nbbuild/
 /dist/
@@ -31,8 +44,22 @@ build/
 !**/src/main/**/build/
 !**/src/test/**/build/
 
-### VS Code ###
+# === VS Code ===
 .vscode/
 
-### Mac OS ###
+# === OS: macOS ===
 .DS_Store
+
+# === OS: Windows ===
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+
+# === General basura de sistema ===
+*.swp
+*.bak
+*.tmp
+*.orig
+*.rej
+*.swo
