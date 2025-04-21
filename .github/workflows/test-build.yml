@@ -16,11 +16,11 @@ jobs:
     - name: Checkout code
       uses: actions/checkout@v2
     
-    - name: Set up JDK 21
+    - name: Set up JDK 21 (Adoptium)
       uses: actions/setup-java@v2
       with:
         java-version: '21'
-        distribution: 'openjdk'  # Usamos openjdk para la distribución
+        distribution: 'temurin'  # Cambiado a 'temurin' (Adoptium)
     
     - name: Build with Maven
       run: mvn clean install  
